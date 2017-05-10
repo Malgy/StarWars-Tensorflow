@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Image Recognition</title>
+  <script src="js/headtrackr.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <canvas id="compare" width="320" height="240" style="display:none"></canvas>
+  <video id="vid" autoplay="" loop="" width="320" height="240"></video>
+
+  <canvas id="overlay" width="320" height="240" style="position: absolute; top: 0px; z-index: 100001; display: block;"></canvas>
+  <h5 id="prediction" style=" top: 0px; z-index: 100001; display: block;"></h5>
+  <canvas id="debug" width="320" height="240" style="position: absolute; top: 0px; z-index: 100002; display: none;"></canvas>
+  <p id="gUMMessage"></p>
+  <p>Status : <span id="headtrackerMessage">Tracking face</span></p>
+  <p>
+    <input type="button" onclick="htracker.stop();htracker.start();" value="reinitiate facedetection">
+    <button id="snap">Begin prediction!</button>
+    <!-- <canvas id="snapPic" width="70" height="150"></canvas> -->
+    <canvas style="display: none;" id="snapPic" width="640" height="480"></canvas>
+    <script src="js/index.js"></script>
+    <br>
+    <br>
+  </p>
+  <form method="post" accept-charset="utf-8" name="form1">
+    <input name="hidden_data" id='hidden_data' type="hidden"/>
+  </form>
+  <script>
+
+  </script>
+</body>
+
+</html>
